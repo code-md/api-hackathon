@@ -1,6 +1,4 @@
 require 'twitter'
-require 'pp'
-require 'debugger'
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = "iDCEPA0409lzVJIur4BQPw"
@@ -9,9 +7,6 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = "vIgMxkoXRemM7hAnFSt3Gz42rg8MlJy0JfPgDwUjCYRPH"
 end
 
-client.search 'jigurda'
-debugger
+puts client.search 'jigurda'
 
-pp "Bye"
-
-
+puts "Bye"
