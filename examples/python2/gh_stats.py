@@ -9,8 +9,11 @@ BASE_URL = 'https://api.github.com/'
 PATH = 'users/{}/repos'
 
 def getUsersStats(username):
-    request = urllib2.urlopen('{}{}'.format(BASE_URL, PATH.format(username)))
+    url = '{}{}'.format(BASE_URL, PATH.format(username))
+
+    request = urllib2.urlopen(url)
     data = request.read()
+
     return json.loads(data)
 
 def showUsersStats(username):
