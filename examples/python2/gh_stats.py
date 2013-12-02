@@ -21,3 +21,6 @@ def showUsersStats(username):
 
     for rep in repos:
         print 'Repo: {} Stars: {} Forks: {}'.format(rep['name'], rep['stargazers_count'], rep['forks_count'])
+
+if __name__ == "__main__":
+    showUsersStats('alisni')
